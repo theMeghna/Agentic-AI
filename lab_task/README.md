@@ -69,11 +69,7 @@ This lab task demonstrates that Small Language Models with fewer than 3B paramet
 
 ---
 
-## ⚠️ Note on GitHub Preview
 
-If GitHub displays **“Invalid Notebook”**, please open the notebook using **Google Colab** for correct rendering. The notebook runs correctly in Colab.
-
----
 
 ## 🛠 Requirements
 
