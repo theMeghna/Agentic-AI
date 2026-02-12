@@ -1,4 +1,5 @@
 # 📈 FinRAG-Analyst: Automated Financial Insight Engine
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://agentic-ai-kp49jrq34o2aodammy8w2s.streamlit.app/)
 
 > **Assignment 1: Retrieval-Augmented Generation (RAG) System**
 > *Analyzes the Apple 2025 10-K Financial Report using Llama 3 & Vector Search.*
