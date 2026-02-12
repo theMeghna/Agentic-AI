@@ -1,4 +1,5 @@
 # 📈 FinRAG-Analyst: Automated Financial Insight Engine
+
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://agentic-ai-kp49jrq34o2aodammy8w2s.streamlit.app/)
 
 > **Assignment 1: Retrieval-Augmented Generation (RAG) System**
@@ -16,7 +17,6 @@ Unlike standard LLMs, this system uses a **RAG (Retrieval-Augmented Generation)*
 * **Source Citations:** Retrieves and references specific chunks from the 10-K PDF.
 * **Hybrid Architecture:** Decoupled **FastAPI** backend and **Streamlit** frontend.
 * **Vector Search:** Powered by **ChromaDB** and **HuggingFace Embeddings**.
-* **Dockerized:** Fully containerized for one-click deployment.
 
 ---
 
@@ -24,38 +24,35 @@ Unlike standard LLMs, this system uses a **RAG (Retrieval-Augmented Generation)*
 | Component | Technology | Description |
 | :--- | :--- | :--- |
 | **LLM** | **Llama 3.3-70b** | High-speed inference via **Groq API** |
-| **Orchestration** | **LangChain** | Manages the RAG pipeline & retrieval logic |
-| **Database** | **ChromaDB** | Stores vector embeddings of the PDF |
+| **Orchestration** | **LangChain** | Manages the RAG pipeline |
+| **Database** | **ChromaDB** | Stores vector embeddings |
 | **Backend** | **FastAPI** | High-performance API server |
 | **Frontend** | **Streamlit** | Interactive chat interface |
-| **Container** | **Docker** | Ensures consistent deployment environment |
 
 ---
 
 ## 📂 Project Structure
 ```text
-Assignment-1 RAG/
+Assignment-1-RAG/
 ├── api/                # FastAPI Backend
-│   └── server.py       # API Endpoints & Logic
+│   └── server.py       # API Endpoints
 ├── core/               # AI Engine (The Brain)
-│   ├── ingest.py       # PDF Loader & Vectorization Script
+│   ├── ingest.py       # PDF Loader & Vectorization
 │   └── rag.py          # RAG Retrieval Chain
 ├── ui/                 # Frontend Interface
 │   └── app.py          # Streamlit Chat Dashboard
 ├── data/               # Raw Data
-│   └── apple_2025_10k.pdf  # Financial Report Source
+│   └── apple_2025_10k.pdf
 ├── vectorstore/        # Pre-computed Vector Database
 ├── notebooks/          # Lab Experiments
-│   └── RAG_Demonstration.ipynb # Step-by-step logic proof
-├── Dockerfile          # Container Configuration
-├── docker-compose.yml  # Multi-container Setup
-└── requirements.txt    # Python Dependencies
-
- ⚡ Installation & Setup
+│   └── RAG_Demonstration.ipynb
+├── requirements.txt    # Python Dependencies
+└── streamlit_app.py    # Cloud Deployment Script
+⚡ Installation & Setup
 1. Clone the Repository
 Bash
 git clone [https://github.com/theMeghna/Agentic-AI.git](https://github.com/theMeghna/Agentic-AI.git)
-cd "Agentic-AI/Assignment-1 RAG"
+cd "Agentic-AI/Assignment-1-RAG"
 2. Create a Virtual Environment
 Bash
 python -m venv venv
@@ -71,25 +68,13 @@ Create a .env file in the root directory and add your Groq API Key:
 
 Ini, TOML
 GROQ_API_KEY=gsk_your_actual_key_here
-🏃‍♂️ How to Run
-You can run the system using Docker (Recommended) or Manually.
-
-Option A: Using Docker (One-Click)
-Bash
-docker-compose up --build
-Frontend: http://localhost:8501
-
-Backend API: http://localhost:8000/docs
-
-Option B: Manual Execution
+🏃‍♂️ How to Run Locally
 Open two separate terminals:
 
 Terminal 1: Start the Backend API
 
 Bash
 python api/server.py
-(Wait until you see "Uvicorn running on https://www.google.com/search?q=http://0.0.0.0:8000")
-
 Terminal 2: Start the Frontend UI
 
 Bash
@@ -101,16 +86,9 @@ Open notebooks/RAG_Demonstration.ipynb
 
 Run all cells to see the Ingestion -> Retrieval -> Generation process in action.
 
-Example Queries
-"What are the primary risk factors for Apple in 2025?"
-
-"How much did the company invest in Research and Development?"
-
-"Summarize the legal proceedings mentioned in Item 3."
-
 👥 Team Members
-Meghna Sahu - Team Lead & AI Core (Core RAG Logic)
+Meghna Sahu - Team Lead & AI Engineer
 
-Kusuma - Frontend Developer (Streamlit UI)
+Kusuma - Frontend Developer
 
-Harshit Sangwan - Backend Developer (FastAPI Integration)
+Harshit Sangwan - Backend Developer
