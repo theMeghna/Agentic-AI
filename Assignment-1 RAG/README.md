@@ -50,7 +50,7 @@ Assignment-1 RAG/
 ├── docker-compose.yml  # Multi-container Setup
 └── requirements.txt    # Python Dependencies
 
-## ⚡ Installation & Setup
+ ⚡ Installation & Setup
 1. Clone the Repository
 Bash
 git clone [https://github.com/theMeghna/Agentic-AI.git](https://github.com/theMeghna/Agentic-AI.git)
