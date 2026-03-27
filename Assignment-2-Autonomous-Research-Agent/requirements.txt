@@ -1,0 +1,21 @@
+# ──────────────────────────────────────────────────────────
+# Autonomous Research Agent — Dependencies
+# ──────────────────────────────────────────────────────────
+
+# Core LangChain
+langchain==0.2.16
+langchain-core==0.2.40
+langchain-community==0.2.16
+
+# Ollama integration (local LLM)
+langchain-ollama==0.1.3
+ollama>=0.3.0
+
+# Web search tool (no API key needed)
+duckduckgo-search==6.3.0
+
+# Wikipedia tool
+wikipedia==1.4.0
+
+# Utilities
+python-dotenv==1.0.1
